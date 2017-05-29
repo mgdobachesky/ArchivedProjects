@@ -1,0 +1,145 @@
+/*page loading options*/
+html, body { 
+height: 100%; 
+width: 100%; 
+margin: 0; 
+}
+/*page loading options*/
+
+
+/*main wrapper*/
+#wrapper {
+	margin: auto;
+	padding: auto;
+	text-align: center;	
+}
+/*main wrapper*/
+
+
+/*body options*/
+body {
+background-image: url("images/background.jpg");
+}
+/*body options*/
+
+
+/*header options*/
+header {
+	background-image: url("images/header.jpg");
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+	padding: 5px;
+}
+/*header options*/
+
+
+/*nav options*/
+nav {
+	padding: 10px;
+	height: 850px;
+	float: left;
+	width: auto;
+	line-height: 30px;
+	background-image: url("images/nav.jpg");
+}
+/*nav options*/
+
+
+/*section options*/
+section {
+	position: relative;
+	top: 175px;
+	float: left;
+	width: 500px;
+	margin: 0% 0% 10% 5%;
+}
+/*section options*/
+
+
+/*aside options*/
+aside {
+	position: relative;
+	top: 190px;
+	float: right;
+	margin: 0% 5% 10% 0%;
+}
+/*aside options*/
+
+
+/*footer options*/
+footer {
+	padding: 3px;
+	clear: both;
+	background-image: url("images/header.jpg");
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+/*footer options*/
+
+
+/*text options*/
+.text {
+	text-align:justify;
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+	line-height: 25px;
+}
+/*text options*/
+
+
+/*headings*/
+.headings {
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+	text-decoration:underline;
+	color:#68686B;
+}
+/*headings*/
+
+
+/*main picture options*/
+#main_picture {
+	border-style: solid;
+	border-width: 5px;
+	color:#68686B;
+	padding: 5px 5px 2px 5px;
+}
+/*main picture options*/
+
+
+/*other picture options*/
+.other_picture {
+	position: relative;
+	top: 60px;
+	border-style: solid;
+	border-width: 5px;
+	color:#68686B;
+	padding: 5px 5px 2px 5px;
+}
+/*other picture options*/
+
+
+/*link style*/
+a:link {
+	text-decoration: none;
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:visited {
+	text-decoration: none;
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:active {
+	text-decoration: underline;
+	color:#68686B;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+/*link style*/

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator</title>
+    <style type="text/css">
+        .grade {width: 40px;}
+        #courseGrid {width: 400px; margin-left:50px; margin-top: 100px; float:left;}
+        #result {float:left;margin-top:300px;font-size: 30px; margin-left: 30px;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="courseGrid"></div>
+    <div id="result"></div>
+    <div style="margin-left:330px;clear: left;"> <input type="button" id="calculateGPA" value="Calculate GPA" /></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var letterValues = [{grade: "A", value: 4.0}, {grade: "A-", value: 3.67}, {grade: "B+", value: 3.33}, {grade: "B", value: 3.0},
+                         {grade: "B-", value: 2.67}, {grade: "C+", value: 2.33}, {grade: "C", value: 2.0}, {grade: "C-", value: 1.67},
+                         {grade: "D+", value: 1.33}, {grade: "D", value: 1.00}, {grade: "F", value: 0.0}
+                        ];
+
+    var courseList = [{courseId: "NE 115", courseName:"Computer & Network Fundamentals", credits: 3},
+                    {courseId: "IT 121", courseName:"IT Visual Communications", credits: 3},
+                    {courseId: "SE 114", courseName:"Prog. Essentials Using C++", credits: 3},
+                    {courseId: "NE 121", courseName:"Windows Networking Essentials", credits: 3},
+                    {courseId: "SE 111", courseName:"HTML and JavaScript", credits: 3},
+                    {courseId: "SE 124", courseName:"Intermediate Prog. Using C++", credits: 3},
+                    {courseId: "MGM 115", courseName:"Effective Mgmt Teams & Projects", credits: 3},
+                    {courseId: "NE 131", courseName:"Networking for Small Business", credits: 3},
+                    {courseId: "SE 133", courseName:"Database Management", credits: 3},
+                    {courseId: "SE 245", courseName:"C#", credits: 3},
+                    {courseId: "SE 252", courseName:"Systems Analysis & Design", credits: 3},
+                    {courseId: "SE 266", courseName:"Web Dev. using PHP & MySQL", credits: 3},
+                    {courseId: "SE 251", courseName:"Advanced JavaScript", credits: 3},
+                    {courseId: "SE 255", courseName:"Advanced C#", credits: 3},
+                    {courseId: "SE 264", courseName:"User Interface Design", credits: 3},
+                    {courseId: "SE 245", courseName:"C#", credits: 3},
+                    {courseId: "IT 267", courseName:"Ethics", credits: 3},
+                    {courseId: "SE 256", courseName:"Web Development using .NET", credits: 3},
+                    {courseId: "SE 265", courseName:"Capstone", credits: 3}
+
+
+    ];
+
+    // Note how all of the array elements contain objects. You could think of them as being
+    // associative arrays, saying our arrays contain associative array elements - but you
+    // really shouldn't. Object can contain methods (even though these don't.)
+
+    // We need a way to dynamically build a HTML table based on the course list.
+    // That should be added to the course grid div when the window loads.
+    // Each course in the table should have a text box for entering in a grade.
+    // The grade should be expressed as a letter grade such as "B+"
+
+    // A click event handler needs to be registered on the button.
+
+    // When clicked, the list of courses should be looped through to build a reference
+    // to obtain the grade from the value of the text box.
+    // If the student has a grade for a course, obtain the credits for the course, then
+    // use the grade's corresponding numeric value and credits to calculate
+    // quality points.
+    // Accumulate points and credits and divide total points by total credits to
+    // determine final GPA, which should be displayed in the result div.
+
+var courses, i;
+
+    var getLetterValue = function(grade) {
+        for (i = 0; i < letterValues.length; i++) {
+            if (letterValues[i].grade === grade) {
+                return (letterValues[i].value);
+            }
+        }
+    }
+
+    var calculateQualityPoints = function(grade, credits) {
+        return (getLetterValue(grade) * credits);
+    }
+
+    var displayCourses = function(courses) {
+        var str = "<table class='table'>";
+        str += "<tr>";
+        str += "<th>Course ID</th><th>Course Name</th><th>Grade</th>";
+        str += "</tr>";
+
+        for (i = 0; i < courses.length; i++) {
+            str += "<tr>";
+            str += "<td>" + courses[i].courseId + "</td>";
+            str += "<td>" + courses[i].courseName + "</td>";
+            str += "<td><input type='text' class='grade' id='grade_" + i + "' /></td>";
+            str += "</tr>";
+        }
+        str += "</table>";
+
+
+        document.getElementById("courseGrid").innerHTML = str;
+
+    }
+
+window.onload = function() {
+    displayCourses(courseList);
+}
+
+    document.getElementById("calculateGPA").onclick = function() {
+        var grade, credits=0, points=0, i;
+        for (i=0; i<courseList.length; i++) {
+            grade = document.getElementById("grade_" + i).value;
+            if (grade != "") {
+                credits += courseList[i].credits;
+                points += calculateQualityPoints(grade, courseList[i].credits);
+                console.log(grade + ", " + credits +", " + points);
+            }
+        }
+
+        if (credits > 0) {
+            var gpa = points/credits;
+        }
+
+        document.getElementById("result").innerHTML = "Your gpa is: " + gpa.toFixed(2);
+    }
+	
+</script>

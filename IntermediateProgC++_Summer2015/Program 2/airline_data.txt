@@ -1,0 +1,6 @@
+83 florida massachusetts 3 O 
+82 boston plainville 83 C 
+21 mansfield europe 45 D 
+98 washington york 9 O 
+7 venice paris 89 C 
+23 italy georgia 230 D 

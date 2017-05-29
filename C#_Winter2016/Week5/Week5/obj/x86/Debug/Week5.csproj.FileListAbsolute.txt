@@ -1,0 +1,16 @@
+C:\Users\Michael\Desktop\ClassWeek5\Week5\bin\Debug\Week5.exe
+C:\Users\Michael\Desktop\ClassWeek5\Week5\bin\Debug\Week5.pdb
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.Form1.resources
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.Properties.Resources.resources
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.exe
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.pdb
+C:\Users\Michael\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.csprojResolveAssemblyReference.cache
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.exe
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.pdb
+C:\Users\001264912\Desktop\ClassWeek5\Week5\bin\Debug\Week5.exe
+C:\Users\001264912\Desktop\ClassWeek5\Week5\bin\Debug\Week5.pdb
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.csprojResolveAssemblyReference.cache
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.Form1.resources
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.Properties.Resources.resources
+C:\Users\001264912\Desktop\ClassWeek5\Week5\obj\x86\Debug\Week5.csproj.GenerateResource.Cache

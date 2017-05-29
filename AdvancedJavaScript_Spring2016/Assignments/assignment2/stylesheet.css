@@ -1,0 +1,12 @@
+.solution {
+    width: 40px;
+}
+
+.wrong {
+	background-color: red;
+	border: 2px solid black;
+}
+
+.right {
+	background-color: white;
+}

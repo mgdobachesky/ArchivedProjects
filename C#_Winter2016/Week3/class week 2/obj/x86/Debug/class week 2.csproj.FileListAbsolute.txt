@@ -1,0 +1,31 @@
+C:\Users\001264912\Desktop\class week 2\class week 2\bin\Debug\class week 2.exe
+C:\Users\001264912\Desktop\class week 2\class week 2\bin\Debug\class week 2.pdb
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class_week_2.Form1.resources
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class_week_2.Properties.Resources.resources
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.csproj.GenerateResource.Cache
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.exe
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.pdb
+C:\Users\Michael\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.exe
+C:\Users\Michael\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.pdb
+C:\Users\Michael\Desktop\class week 2\class week 2\obj\x86\Debug\class_week_2.Form1.resources
+C:\Users\Michael\Desktop\class week 2\class week 2\obj\x86\Debug\class_week_2.Properties.Resources.resources
+C:\Users\Michael\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\class week 2\class week 2\bin\Debug\class week 2.exe
+C:\Users\Michael\Desktop\class week 2\class week 2\bin\Debug\class week 2.pdb
+C:\Users\001264912\Desktop\class week 2\class week 2\obj\x86\Debug\class week 2.csprojResolveAssemblyReference.cache
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.exe
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.pdb
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\bin\Debug\class week 2.exe
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\bin\Debug\class week 2.pdb
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.csprojResolveAssemblyReference.cache
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class_week_2.Form1.resources
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class_week_2.Properties.Resources.resources
+C:\Users\001264912\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.exe
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.pdb
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\bin\Debug\class week 2.exe
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\bin\Debug\class week 2.pdb
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class_week_2.Form1.resources
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class_week_2.Properties.Resources.resources
+C:\Users\Michael\Desktop\ClassWeek3\class week 2\obj\x86\Debug\class week 2.csproj.GenerateResource.Cache

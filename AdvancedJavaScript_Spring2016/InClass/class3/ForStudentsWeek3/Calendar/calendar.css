@@ -1,0 +1,9 @@
+.main {margin-left:50px; margin-top:50px;}
+#weekHeader {margin-left:50px; margin-top:50px; clear: left; margin-bottom: 10px; border: 1px red; height: 40px;}
+
+
+.day  {height: 50px; width: 100px; border: 1px solid; float: left; margin-left:5px;text-align: center; vertical-align: middle; line-height: 50px;}
+.row {clear: left;}
+.dayHeader {height: 30px; width: 100px; border: 1px solid; float: left; margin-left:5px; font-weight: bold;}
+#results {clear: left; margin-left:50px; height: 250px;}
+input[type=button] {width: 200px; height: 40px;}

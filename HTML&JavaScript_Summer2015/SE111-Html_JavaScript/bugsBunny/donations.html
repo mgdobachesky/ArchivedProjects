@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<!--Michael Dobachesky, SE111.12, Assignment #5, 8/21/2015-->
+<meta charset="UTF-8">
+<title> Campaign Website </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+
+
+<body>
+<div class="main_wrapper">
+
+<header>
+<h1>Bugs Bunny for Mayor</h1>
+</header>
+
+<nav>
+<table class="table_options">
+<tr>
+<td class="cell_options"><a href="index.html">Home</a></td>
+<td class="cell_options"><a href="about.html">About</a></td>
+<td class="cell_options"><a href="political_positions.html">Political Positions</a></td>
+<td class="cell_options"><a href="donations.html">Donations</a></td>
+<td class="cell_options"><a href="volunteer.html">Volunteer</a></td>
+</tr>
+</table>
+</nav>
+
+<main>
+<div class="section_wrapper">
+<table class="donate_table">
+<tr>
+<td class="donate_cell">
+
+<div class="donate">
+<form action="action_page.php">
+<fieldset>
+<legend><h3>Donations</h3></legend>
+First name:<br />
+<input type="text" name="firstname"><br />
+Last name:<br />
+<input type="text" name="lastname"><br /><br />
+
+Address:<br />
+<input type="text" name="address"><br />
+State:<br />
+<input type="text" name="state" maxlength="2" size="4"><br /><br />
+
+<fieldset class="donate_lists">
+<legend>Credit Card</legend>
+<input type="radio" name="credit_card" value="visa" checked>Visa <br />
+<input type="radio" name="credit_card" value="master_card">Master Card <br />
+<input type="radio" name="credit_card" value="discover">Discover <br />
+</fieldset>
+CC#:<br />
+<input type="text" name="cc_number" size="4" maxlength="4"><br /><br />
+
+<fieldset class="donate_lists">
+<legend>Donation</legend>
+<input type="radio" name="donation" value="25">$25 <br />
+<input type="radio" name="donation" value="50">$50 <br />
+<input type="radio" name="donation" value="75">$75 <br />
+<input type="radio" name="donation" value="100" checked>$100 <br />
+</fieldset><br />
+
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+
+</td>
+</tr>
+</div>
+</table>
+</div>
+</main>
+
+<footer>
+<p>Bugs Bunny for Mayor &copy; Toontown</p>
+</footer>
+
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,204 @@
+/*page loading options*/
+html, body {
+height: 100%;
+width: 100%;
+margin: 0px;
+}
+/*page loading options*/
+
+
+/*body options*/
+body{
+	background-image: url("images/paper_texture.jpg");
+}
+/*body options*/
+
+
+/*wrappers*/
+.main_wrapper {
+margin: auto;
+width: auto;
+}
+
+.section_wrapper{
+	margin: auto;
+	width: 90%;
+	height: 750px;
+}
+/*wrappers*/
+
+
+/*header options*/
+header {
+background-image: url("images/header.jpg");
+color: tan;
+padding: 10px;
+text-align: center;
+font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+/*header options*/
+
+
+/*navigation options*/
+nav{
+height: 50px;
+background-image: url("images/nav.jpg");
+}
+/*navigation options*/
+
+
+/*main options*/
+main {
+	height: 750px;
+}
+/*main options*/
+
+
+/*footer options*/
+footer{
+	padding: 1px;
+	background-image: url("images/header.jpg");
+	color: tan;
+	text-align: center;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+	vertical-align: bottom;
+}
+/*footer options*/
+
+
+/*table options for nav*/
+.table_options {
+width: 100%;
+text-align: center;
+height: 50px;
+border: 2px solid black;
+border-collapse: collapse;
+}
+
+.cell_options {
+border: 2px solid black;
+border-collapse: collapse;
+width: 20%;
+}
+/*table options for nav*/
+
+
+/*options for main page*/
+#bugs_picture{
+	position: relative;
+	top: 5px;
+	width: 100%;
+	text-align: center;
+}
+/*options for main page*/
+
+
+/*options for table layouts*/
+.main_table {
+	width: 100%;
+	text-align: center;
+}
+
+.donate_table {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.donate_cell {
+	width: 50%;
+	height: 720px;
+	padding: 0px 0px 0px 50px;
+}
+
+.sub_table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.main_cell {
+	width: 50%;
+	padding: 0px 30px 0px 30px;
+	height: 750px;
+}
+
+.index_cell {
+	width: 100%;
+	height: 450px;
+}
+
+.index_sub_cell {
+	width: 33.333333333334%;
+	height: 230px;
+	border: 6px solid brown;
+}
+
+.video_formatting {
+overflow: scroll;
+height: 200px;
+}
+
+.main_text {
+	text-align: justify;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+	
+}
+
+.main_headings {
+	text-align: center;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+.general_text {
+font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+.general_headings {
+font-family: "palatine linotype", "book antiqua", palatine, serif;
+text-decoration: underline;
+}
+
+.list_text {
+position: relative;
+font-family: "palatine linotype", "book antiqua", palatine, serif;
+list-style-position: inside;
+padding: 0px 5px 0px 0px;
+}
+
+.donate {
+width:750px;
+font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+.donate_lists{
+	width: 150px;
+}
+/*options for table layouts*/
+
+
+/*link style*/
+a:link {
+	text-decoration: none;
+	color: black;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+
+a:active {
+	text-decoration: underline;
+	color: black;
+	font-family: "palatine linotype", "book antiqua", palatine, serif;
+}
+/*link style*/

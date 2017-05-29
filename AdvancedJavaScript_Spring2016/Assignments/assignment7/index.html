@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 7</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<canvas id="canvas" height="160" width="800" style="border:1px solid #000000"></canvas>
+		<br /><button id="race">Play</button>
+		<p id="redScore"></p>
+		<p id="blueScore"></p>
+		<script type="text/javascript">
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var redRandom = 0;
+			var blueRandom = 0;
+			var redScore = localStorage['redScore'] || 0;
+			var blueScore = localStorage['blueScore'] || 0;
+			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			var redCar = new Image();
+			var blueCar = new Image();
+			var track = new Image();
+			redCar.src = "pictures/redGuy.png";
+			blueCar.src = "pictures/blueGuy.png";
+			track.src = "pictures/track.jpg";
+			
+			document.getElementById("redScore").innerHTML = "Red: " + redScore;
+			document.getElementById("blueScore").innerHTML = "Blue: " + blueScore;
+			
+			
+			$('#race').on("click", function init(){
+				redRandom = 0;
+				blueRandom = 0;
+				draw();
+			});
+			
+			function draw(){
+				ctx.clearRect(0,0, 800, 160);
+				ctx.drawImage(track, 0, 0);
+				ctx.moveTo(700, 0);
+				ctx.lineTo(700, 160);
+				ctx.stroke();
+				
+				$id = window.requestAnimationFrame(draw);
+				
+				redGuy();
+				blueGuy();
+			}
+			
+			function endRed() {
+				window.cancelAnimationFrame($id);
+				ctx.font = "30px Arial";
+				ctx.fillStyle = "#ff1a1a";
+				ctx.fillText("Red Wins!", 10, 53);
+				redScore++;
+				document.getElementById("redScore").innerHTML = "Red: " + redScore;
+				stringify = JSON.stringify(redScore);
+				localStorage['redScore'] = stringify;
+			}
+			
+			function endBlue() {
+				window.cancelAnimationFrame($id);
+				ctx.font = "30px Arial";
+				ctx.fillStyle = "#66ffff";
+				ctx.fillText("Blue Wins!", 10, 125);
+				blueScore++;
+				document.getElementById("blueScore").innerHTML = "Blue: " + blueScore;
+				stringify = JSON.stringify(blueScore);
+				localStorage['blueScore'] = stringify;
+			}
+			
+			function redGuy() {
+				redRandom += Math.random() * 10;
+				if (redRandom > 600) {
+					redRandom = 610;
+					endRed();
+				}
+				//ctx.fillStyle = "red";
+				//ctx.fillRect(redRandom,10,100,50);
+				ctx.drawImage(redCar, redRandom, 15);
+			}
+			
+			function blueGuy() {
+				blueRandom += Math.random() * 10;
+				if (blueRandom > 600) {
+					blueRandom = 610;
+					endBlue();
+				}
+				//ctx.fillStyle = "blue";
+				//ctx.fillRect(blueRandom,100,100,50);
+				ctx.drawImage(blueCar, blueRandom, 95);
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,1732 @@
+/****** Object:  StoredProcedure [dbo].[users_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[users_update]
+GO
+/****** Object:  StoredProcedure [dbo].[users_login]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[users_login]
+GO
+/****** Object:  StoredProcedure [dbo].[users_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[users_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[users_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[users_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[users_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[users_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_update]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_interim_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_interim_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getTableForNewRes]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_getTableForNewRes]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[tables_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[states_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[states_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[sections_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[sections_update]
+GO
+/****** Object:  StoredProcedure [dbo].[sections_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[sections_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[sections_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[sections_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[sections_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[sections_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_update]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_interim_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_interim_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_interim_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_interim_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getByDate]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_getByDate]
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[reservations_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_update]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_interim_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_interim_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getByMenuAndCat]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_getByMenuAndCat]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getByMenu]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_getByMenu]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_items_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_categories_update]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_categories_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_categories_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[menu_categories_getAll]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_update]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_update]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_insert]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_insert]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getTop50]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_getTop50]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getById]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_getById]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getByEmail]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_getByEmail]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getAll]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP PROCEDURE [dbo].[guests_getAll]
+GO
+ALTER TABLE [dbo].[users] DROP CONSTRAINT [FK_users_states]
+GO
+ALTER TABLE [dbo].[tables] DROP CONSTRAINT [FK_tables_sections]
+GO
+ALTER TABLE [dbo].[reservations] DROP CONSTRAINT [FK_reservations_users]
+GO
+ALTER TABLE [dbo].[reservations] DROP CONSTRAINT [FK_reservations_tables]
+GO
+ALTER TABLE [dbo].[reservations] DROP CONSTRAINT [FK_reservations_guests]
+GO
+ALTER TABLE [dbo].[menu_items] DROP CONSTRAINT [FK_menu_items_menus]
+GO
+ALTER TABLE [dbo].[menu_items] DROP CONSTRAINT [FK_menu_items_menu_categories]
+GO
+/****** Object:  Table [dbo].[users]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[users]
+GO
+/****** Object:  Table [dbo].[tables]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[tables]
+GO
+/****** Object:  Table [dbo].[states]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[states]
+GO
+/****** Object:  Table [dbo].[sections]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[sections]
+GO
+/****** Object:  Table [dbo].[reservations]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[reservations]
+GO
+/****** Object:  Table [dbo].[menus]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[menus]
+GO
+/****** Object:  Table [dbo].[menu_items]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[menu_items]
+GO
+/****** Object:  Table [dbo].[menu_categories]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[menu_categories]
+GO
+/****** Object:  Table [dbo].[guests]    Script Date: 9/22/2016 9:01:14 AM ******/
+DROP TABLE [dbo].[guests]
+GO
+/****** Object:  Table [dbo].[guests]    Script Date: 9/22/2016 9:01:14 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[guests](
+	[guest_id] [int] IDENTITY(1,1) NOT NULL,
+	[guest_email] [varchar](100) NOT NULL,
+	[guest_first] [varchar](25) NOT NULL,
+	[guest_last] [varchar](25) NOT NULL,
+	[guest_salt] [varchar](255) NOT NULL,
+	[guest_pwd] [varchar](500) NOT NULL,
+	[guest_phone] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_guests] PRIMARY KEY CLUSTERED 
+(
+	[guest_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[menu_categories]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[menu_categories](
+	[cat_id] [int] IDENTITY(1,1) NOT NULL,
+	[cat_name] [varchar](25) NOT NULL,
+ CONSTRAINT [PK_menu_categories] PRIMARY KEY CLUSTERED 
+(
+	[cat_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[menu_items]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[menu_items](
+	[item_id] [int] IDENTITY(1,1) NOT NULL,
+	[menu_id] [int] NOT NULL,
+	[cat_id] [int] NOT NULL,
+	[item_name] [varchar](50) NOT NULL,
+	[item_desc] [varchar](500) NOT NULL,
+	[item_allergens] [varchar](255) NULL,
+	[item_price] [decimal](5, 2) NOT NULL,
+	[item_gluten_free] [bit] NOT NULL,
+	[item_active] [bit] NOT NULL,
+ CONSTRAINT [PK_menu_items] PRIMARY KEY CLUSTERED 
+(
+	[item_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[menus]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[menus](
+	[menu_id] [int] IDENTITY(1,1) NOT NULL,
+	[menu_name] [varchar](25) NOT NULL,
+ CONSTRAINT [PK_menus] PRIMARY KEY CLUSTERED 
+(
+	[menu_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[reservations]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[reservations](
+	[res_id] [int] IDENTITY(1,1) NOT NULL,
+	[guest_id] [int] NOT NULL,
+	[tbl_id] [int] NOT NULL,
+	[user_id] [int] NULL,
+	[res_date] [date] NOT NULL,
+	[res_time] [time](7) NOT NULL,
+	[res_guest_cnt] [int] NOT NULL,
+	[res_spec_req] [varchar](255) NOT NULL,
+ CONSTRAINT [PK_reservations] PRIMARY KEY CLUSTERED 
+(
+	[res_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[sections]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[sections](
+	[sect_id] [int] IDENTITY(1,1) NOT NULL,
+	[sect_name] [varchar](50) NOT NULL,
+	[sect_desc] [varchar](50) NOT NULL,
+	[sect_active] [bit] NOT NULL,
+ CONSTRAINT [PK_sections] PRIMARY KEY CLUSTERED 
+(
+	[sect_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[states]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[states](
+	[state_id] [char](2) NOT NULL,
+	[state_name] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_States_1] PRIMARY KEY CLUSTERED 
+(
+	[state_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tables]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tables](
+	[tbl_id] [int] IDENTITY(1,1) NOT NULL,
+	[sect_id] [int] NOT NULL,
+	[tbl_name] [varchar](25) NOT NULL,
+	[tbl_desc] [varchar](50) NOT NULL,
+	[tbl_seat_cnt] [int] NOT NULL,
+	[tbl_active] [bit] NOT NULL,
+ CONSTRAINT [PK_tables] PRIMARY KEY CLUSTERED 
+(
+	[tbl_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[users]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[users](
+	[user_id] [int] IDENTITY(1,1) NOT NULL,
+	[user_email] [varchar](100) NOT NULL,
+	[user_first] [varchar](25) NOT NULL,
+	[user_last] [varchar](25) NOT NULL,
+	[user_add1] [varchar](50) NOT NULL,
+	[user_add2] [varchar](50) NULL,
+	[user_city] [varchar](25) NOT NULL,
+	[state_id] [char](2) NOT NULL,
+	[user_zip] [varchar](10) NOT NULL,
+	[user_salt] [varchar](255) NOT NULL,
+	[user_pwd] [varchar](500) NOT NULL,
+	[user_phone] [varchar](10) NOT NULL,
+	[user_active] [bit] NOT NULL,
+ CONSTRAINT [PK_users] PRIMARY KEY CLUSTERED 
+(
+	[user_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[guests] ON 
+
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1, N'mike@email.com', N'res', N'res', N'salt', N'password', N'5086541')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (2, N'updatepro8@email.com', N'Some', N'Guy', N'salt', N'password', N'5081231234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (3, N'thatperson@email.com', N'That', N'Person', N'salt', N'password', N'5086541234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (4, N'vegetables@email.com', N'Vege', N'Tables', N'salt', N'password', N'5086541')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (5, N'number5@email.com', N'Number', N'Five', N'salt', N'password', N'(555)-555-')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1002, N'testfour@test.com', N'Test', N'Four', N'salt', N'password', N'5081261234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1003, N'mike2@email.com', N'Michael', N'Dobachesky', N'salt', N'password', N'5081231234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1004, N'testfive555@test.com', N'Test', N'Update', N'salt', N'password', N'5086543214')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1005, N'someTest@test.com', N'Add', N'Another', N'salt', N'password', N'1231231234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1006, N'mike77@email.com', N'Michael', N'Dobachesky', N'salt', N'password', N'5081231234')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1007, N'test@testing.com', N'first1', N'last', N'salt', N'password', N'5086541')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1008, N'newtest@email.com', N'first', N'last', N'salt', N'password', N'5086541')
+GO
+INSERT [dbo].[guests] ([guest_id], [guest_email], [guest_first], [guest_last], [guest_salt], [guest_pwd], [guest_phone]) VALUES (1009, N'mike455@live.com', N'Mikel', N'Dobachky', N'salt', N'password', N'6543211')
+GO
+SET IDENTITY_INSERT [dbo].[guests] OFF
+GO
+SET IDENTITY_INSERT [dbo].[menu_categories] ON 
+
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (1, N'Appetizers')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (2, N'Sandwiches')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (3, N'Salads')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (4, N'Entrees')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (5, N'Sides')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (6, N'Beverage - Non Alcholic')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (7, N'Beverage - Wine')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (8, N'Beverage - Beer')
+GO
+INSERT [dbo].[menu_categories] ([cat_id], [cat_name]) VALUES (9, N'Soups')
+GO
+SET IDENTITY_INSERT [dbo].[menu_categories] OFF
+GO
+SET IDENTITY_INSERT [dbo].[menu_items] ON 
+
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (11, 1, 9, N'Rise and Shine', N'A soup with lots of sunshine', N'UV Radiation', CAST(2.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (12, 1, 9, N'Breakfast Soup', N'A soup made for breakfast', N'None', CAST(4.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (13, 1, 2, N'Breakfast Sandwich', N'A sandwich made especially for breakfast', N'None', CAST(3.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (14, 1, 2, N'Valley Sandwich', N'Fresh vegetables upon the horizon', N'None', CAST(4.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (15, 1, 6, N'Orange Juice', N'Freshly squeezed orange juice', N'Oranges', CAST(1.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (16, 1, 6, N'Apple Juice', N'Juice made from apples', N'Apples', CAST(1.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (17, 1, 3, N'Morning Lettuce', N'All the lettuces that make morning work', N'None', CAST(3.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (18, 1, 3, N'Breakfast Salad', N'A salad made for breakfast', N'None', CAST(3.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (19, 1, 5, N'Plate of Vegetables', N'Just a plate of vegetables', N'Vegetables', CAST(4.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (20, 1, 5, N'Breakfast of the Day', N'Cheifs choice of the best breakfast for the day', N'Nuts', CAST(2.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (21, 4, 4, N'Lunch Entree', N'An entree made for lunch', N'None', CAST(3.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (22, 4, 4, N'Noon Vegetables', N'Vegetables made to keep your day going', N'None', CAST(4.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (23, 4, 9, N'Lunch Soup', N'Soup made for lunch time', N'None', CAST(2.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (24, 4, 9, N'Afternoon Rest', N'A soup made with special herbs to help you relax', N'Basil', CAST(4.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (25, 4, 2, N'Lunch Sandwich', N'A sandwich made with vegetable that keep you going', N'None', CAST(3.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (26, 4, 2, N'Eggplant Sandwich', N'Eggplant and tomatoes in bread', N'Eggplant', CAST(2.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (27, 4, 3, N'Mid-Day Salad', N'A salad for Mid-Day', N'None', CAST(2.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (28, 4, 3, N'Rice and Lettuce', N'A unique mix of rice and lettuce', N'Rice', CAST(4.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (29, 4, 6, N'Tea', N'A nice cup of tea', N'Caffine', CAST(1.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (30, 4, 6, N'Smoothie', N'A smoothie mixed with the best ingredients', N'None', CAST(3.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (31, 2, 7, N'Red Wine', N'A glass of red wine', N'Alcohol', CAST(7.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (32, 2, 7, N'White Wine', N'A glass of white wine', N'Alcohol', CAST(7.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (33, 2, 6, N'Detox Smoothie', N'A smoothie that detoxes your system', N'None', CAST(4.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (34, 2, 6, N'Water', N'A glass of water', N'H20', CAST(0.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (35, 2, 8, N'Potatoe Beer', N'Beer made from potatoes', N'Alcohol', CAST(6.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (36, 2, 8, N'Apple Beer', N'Beer made from apples', N'Alcohol', CAST(6.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (37, 2, 1, N'Vegetable Platter', N'A plate of vegetables', N'None', CAST(1.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (38, 2, 1, N'Natures Best', N'The best of the best vegetables of the day', N'None', CAST(4.99 AS Decimal(5, 2)), 0, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (39, 2, 4, N'Sauteed Vegetable', N'Vegetables sauteed in vegetable oil', N'Vegetable Oil', CAST(5.99 AS Decimal(5, 2)), 1, 1)
+GO
+INSERT [dbo].[menu_items] ([item_id], [menu_id], [cat_id], [item_name], [item_desc], [item_allergens], [item_price], [item_gluten_free], [item_active]) VALUES (40, 2, 4, N'Steamed Vegetables', N'A collection of the best steamed vegetables', N'None', CAST(4.99 AS Decimal(5, 2)), 1, 1)
+GO
+SET IDENTITY_INSERT [dbo].[menu_items] OFF
+GO
+SET IDENTITY_INSERT [dbo].[menus] ON 
+
+GO
+INSERT [dbo].[menus] ([menu_id], [menu_name]) VALUES (1, N'Breakfast')
+GO
+INSERT [dbo].[menus] ([menu_id], [menu_name]) VALUES (2, N'Dinner')
+GO
+INSERT [dbo].[menus] ([menu_id], [menu_name]) VALUES (3, N'Kids')
+GO
+INSERT [dbo].[menus] ([menu_id], [menu_name]) VALUES (4, N'Lunch')
+GO
+INSERT [dbo].[menus] ([menu_id], [menu_name]) VALUES (5, N'Brunch')
+GO
+SET IDENTITY_INSERT [dbo].[menus] OFF
+GO
+SET IDENTITY_INSERT [dbo].[reservations] ON 
+
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1, 1, 2, 1, CAST(N'2016-08-12' AS Date), CAST(N'20:00:00' AS Time), 4, N'Arrange proper dining')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (3, 2, 1, 1005, CAST(N'2016-11-09' AS Date), CAST(N'09:00:00' AS Time), 8, N'Need eight seats')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (4, 3, 1, 5, CAST(N'2016-03-11' AS Date), CAST(N'09:00:00' AS Time), 4, N'Sing happy birthday')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (5, 4, 5, 6, CAST(N'2016-09-12' AS Date), CAST(N'14:00:00' AS Time), 5, N'Table near a window')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (6, 5, 4, 7, CAST(N'2016-07-12' AS Date), CAST(N'09:00:00' AS Time), 2, N'Nice lighting')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1002, 2, 2, 1005, CAST(N'2016-09-30' AS Date), CAST(N'09:24:00' AS Time), 1, N'none')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1003, 1, 1004, 1, CAST(N'2016-09-30' AS Date), CAST(N'15:53:00' AS Time), 4, N'Testing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1004, 1, 3, 1, CAST(N'2016-09-11' AS Date), CAST(N'10:28:00' AS Time), 3, N'Testing123')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1011, 1, 1005, 1, CAST(N'2016-09-11' AS Date), CAST(N'19:52:00' AS Time), 7, N'Testing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1012, 1, 1005, 1, CAST(N'2016-09-11' AS Date), CAST(N'19:53:00' AS Time), 7, N'Testing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1015, 1, 1004, 1, CAST(N'2016-09-11' AS Date), CAST(N'20:08:00' AS Time), 8, N'Testing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1017, 1006, 1004, 1, CAST(N'2016-09-11' AS Date), CAST(N'20:20:00' AS Time), 9, N'Just testing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1018, 1006, 1005, 1, CAST(N'2016-09-11' AS Date), CAST(N'20:21:00' AS Time), 10, N'Testing123')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1020, 1008, 1002, 1, CAST(N'2016-09-22' AS Date), CAST(N'18:07:00' AS Time), 10, N'nothing')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1021, 1, 1002, 1, CAST(N'2016-09-14' AS Date), CAST(N'17:13:00' AS Time), 10, N'spec')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1022, 1, 2, 1, CAST(N'2016-09-14' AS Date), CAST(N'17:21:00' AS Time), 4, N'spec')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1023, 1007, 2, 1, CAST(N'2016-09-15' AS Date), CAST(N'09:18:00' AS Time), 3, N'spec')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1024, 1007, 3, 1, CAST(N'2016-09-15' AS Date), CAST(N'09:19:00' AS Time), 5, N'spec')
+GO
+INSERT [dbo].[reservations] ([res_id], [guest_id], [tbl_id], [user_id], [res_date], [res_time], [res_guest_cnt], [res_spec_req]) VALUES (1025, 1009, 5, 1, CAST(N'2016-09-30' AS Date), CAST(N'10:29:00' AS Time), 7, N'To test')
+GO
+SET IDENTITY_INSERT [dbo].[reservations] OFF
+GO
+SET IDENTITY_INSERT [dbo].[sections] ON 
+
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (1, N'Outdoors', N'This section is among the elements', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (2, N'Indoors', N'This section is inside the main building', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (3, N'VIP', N'This section is for very important people', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (4, N'Skylight', N'This section has a wonderful view', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (5, N'Bandfront', N'This section offers front row seats to live music', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (1002, N'Reserved', N'This section is for reservations', 1)
+GO
+INSERT [dbo].[sections] ([sect_id], [sect_name], [sect_desc], [sect_active]) VALUES (1003, N'Test Section', N'Testing', 0)
+GO
+SET IDENTITY_INSERT [dbo].[sections] OFF
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'AK', N'ALASKA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'AL', N'ALABAMA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'AR', N'ARKANSAS')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'AZ', N'ARIZONA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'CA', N'CALIFORNIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'CO', N'COLORADO')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'CT', N'CONNECTICUT')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'DC', N'DISTRICT OF COLUMBIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'DE', N'DELAWARE')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'FL', N'FLORIDA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'GA', N'GEORGIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'HI', N'HAWAII')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'IA', N'IOWA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'ID', N'IDAHO')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'IL', N'ILLINOIS')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'IN', N'INDIANA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'KS', N'KANSAS')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'KY', N'KENTUCKY')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'LA', N'LOUISIANA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MA', N'MASSACHUSETTS')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MD', N'MARYLAND')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'ME', N'MAINE')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MI', N'MICHIGAN')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MN', N'MINNESOTA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MO', N'MISSOURI')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MS', N'MISSISSIPPI')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'MT', N'MONTANA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NC', N'NORTH CAROLINA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'ND', N'NORTH DAKOTA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NE', N'NEBRASKA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NH', N'NEW HAMPSHIRE')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NJ', N'NEW JERSEY')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NM', N'NEW MEXICO')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NV', N'NEVADA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'NY', N'NEW YORK')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'OH', N'OHIO')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'OK', N'OKLAHOMA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'OR', N'OREGON')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'PA', N'PENNSYLVANIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'PW', N'PALAU')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'RI', N'RHODE ISLAND')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'SC', N'SOUTH CAROLINA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'SD', N'SOUTH DAKOTA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'TN', N'TENNESSEE')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'TX', N'TEXAS')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'UT', N'UTAH')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'VA', N'VIRGINIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'VT', N'VERMONT')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'WA', N'WASHINGTON')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'WI', N'WISCONSIN')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'WV', N'WEST VIRGINIA')
+GO
+INSERT [dbo].[states] ([state_id], [state_name]) VALUES (N'WY', N'WYOMING')
+GO
+SET IDENTITY_INSERT [dbo].[tables] ON 
+
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (1, 1, N'Table one', N'This is a table with eight seats', 2, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (2, 2, N'Table two', N'This is a table with four seats', 4, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (3, 3, N'Table three', N'This is a table with six seats', 6, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (4, 4, N'Table four', N'This is a table with four seats', 4, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (5, 5, N'Table five', N'This is a table with eight seats', 8, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (1002, 5, N'Table six', N'The sixth table', 12, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (1003, 3, N'Table seven', N'The seventh table', 7, 1)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (1004, 1003, N'Test Table', N'Testing', 2, 0)
+GO
+INSERT [dbo].[tables] ([tbl_id], [sect_id], [tbl_name], [tbl_desc], [tbl_seat_cnt], [tbl_active]) VALUES (1005, 4, N'Vege Table', N'A vege table', 8, 1)
+GO
+SET IDENTITY_INSERT [dbo].[tables] OFF
+GO
+SET IDENTITY_INSERT [dbo].[users] ON 
+
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1, N'mike@email.com', N'Michael', N'Dobachesky', N'1 street drive', N'', N'plainville', N'MA', N'02762', N'salt', N'password', N'5081231234', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (4, N'someguy@email.com', N'Some', N'Guy', N'1 Street Drive', N'2 Street Drive', N'Cityville', N'RI', N'02038', N'salt', N'password', N'555-5555', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (5, N'anotherperson@email.com', N'Another', N'Person', N'1 Street Lane', N'', N'Townsville', N'FL', N'02391', N'salt', N'password', N'555-5555', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (6, N'anairplane@email.com', N'Air', N'Plane', N'1 Sky Top', N'', N'Skyville', N'MA', N'02238', N'salt', N'password', N'555-5555', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (7, N'number5@email.com', N'Number', N'Five', N'5 Street Drive', N'5 Street Lane', N'Fiveville', N'RI', N'02038', N'salt', N'password', N'555-5555', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1005, N'updatepro8@email.com', N'first', N'last', N'address1', N'address2', N'city', N'RI', N'01234', N'salt', N'password', N'5081231234', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1006, N'emailtest@email.com', N'input', N'from', N'address1', N'address2', N'city', N'IA', N'06512', N'salt', N'password', N'4011231234', 0)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1007, N'testing@test.com', N'Test', N'User', N'1 Test Drive', N'2 Test Drive', N'Testing', N'KS', N'12345', N'salt', N'password', N'5081231233', 0)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1008, N'testfour@test.com', N'Test', N'Four', N'4 Test Street', N'', N'Cityville', N'GA', N'01264', N'salt', N'password', N'5081261234', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1009, N'mike2@email.com', N'Michael', N'Dobachesky', N'1 street drive', N'', N'plainville', N'MA', N'02762', N'salt', N'password', N'5081231234', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1010, N'testfive555@test.com', N'Test', N'Update', N'4 test Street', N'3 test Street', N'cityville', N'AZ', N'12345', N'salt', N'password', N'5086543214', 1)
+GO
+INSERT [dbo].[users] ([user_id], [user_email], [user_first], [user_last], [user_add1], [user_add2], [user_city], [state_id], [user_zip], [user_salt], [user_pwd], [user_phone], [user_active]) VALUES (1011, N'someTest@test.com', N'Add', N'Another', N'4 Test Street', N'', N'city', N'AZ', N'12341', N'salt', N'password', N'1231231234', 0)
+GO
+SET IDENTITY_INSERT [dbo].[users] OFF
+GO
+ALTER TABLE [dbo].[menu_items]  WITH CHECK ADD  CONSTRAINT [FK_menu_items_menu_categories] FOREIGN KEY([cat_id])
+REFERENCES [dbo].[menu_categories] ([cat_id])
+GO
+ALTER TABLE [dbo].[menu_items] CHECK CONSTRAINT [FK_menu_items_menu_categories]
+GO
+ALTER TABLE [dbo].[menu_items]  WITH CHECK ADD  CONSTRAINT [FK_menu_items_menus] FOREIGN KEY([menu_id])
+REFERENCES [dbo].[menus] ([menu_id])
+GO
+ALTER TABLE [dbo].[menu_items] CHECK CONSTRAINT [FK_menu_items_menus]
+GO
+ALTER TABLE [dbo].[reservations]  WITH CHECK ADD  CONSTRAINT [FK_reservations_guests] FOREIGN KEY([guest_id])
+REFERENCES [dbo].[guests] ([guest_id])
+GO
+ALTER TABLE [dbo].[reservations] CHECK CONSTRAINT [FK_reservations_guests]
+GO
+ALTER TABLE [dbo].[reservations]  WITH CHECK ADD  CONSTRAINT [FK_reservations_tables] FOREIGN KEY([tbl_id])
+REFERENCES [dbo].[tables] ([tbl_id])
+GO
+ALTER TABLE [dbo].[reservations] CHECK CONSTRAINT [FK_reservations_tables]
+GO
+ALTER TABLE [dbo].[reservations]  WITH CHECK ADD  CONSTRAINT [FK_reservations_users] FOREIGN KEY([user_id])
+REFERENCES [dbo].[users] ([user_id])
+GO
+ALTER TABLE [dbo].[reservations] CHECK CONSTRAINT [FK_reservations_users]
+GO
+ALTER TABLE [dbo].[tables]  WITH CHECK ADD  CONSTRAINT [FK_tables_sections] FOREIGN KEY([sect_id])
+REFERENCES [dbo].[sections] ([sect_id])
+GO
+ALTER TABLE [dbo].[tables] CHECK CONSTRAINT [FK_tables_sections]
+GO
+ALTER TABLE [dbo].[users]  WITH CHECK ADD  CONSTRAINT [FK_users_states] FOREIGN KEY([state_id])
+REFERENCES [dbo].[states] ([state_id])
+GO
+ALTER TABLE [dbo].[users] CHECK CONSTRAINT [FK_users_states]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[guests_getAll]
+AS
+SELECT [guest_id]
+      ,[guest_email]
+      ,[guest_first]
+      ,[guest_last]
+	  ,guest_first + ' ' + guest_last as guest_name
+      ,[guest_salt]
+      ,[guest_pwd]
+      ,[guest_phone]
+  FROM [dbo].[guests]
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getByEmail]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[guests_getByEmail]
+@guest_email varchar(100)
+as 
+SELECT [guest_id]
+      ,[guest_email]
+      ,[guest_first]
+      ,[guest_last]
+      ,[guest_salt]
+      ,[guest_pwd]
+      ,[guest_phone]
+  FROM [dbo].[guests]
+WHERE guest_email = @guest_email
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[guests_getById]
+@guest_id int
+as 
+SELECT [guest_id]
+      ,[guest_email]
+      ,[guest_first]
+      ,[guest_last]
+      ,[guest_salt]
+      ,[guest_pwd]
+      ,[guest_phone]
+  FROM [dbo].[guests]
+WHERE guest_id = @guest_id
+GO
+/****** Object:  StoredProcedure [dbo].[guests_getTop50]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[guests_getTop50]
+as 
+SELECT TOP 50 [guest_id]
+      ,[guest_email]
+      ,[guest_first]
+      ,[guest_last]
+      ,[guest_salt]
+      ,[guest_pwd]
+      ,[guest_phone]
+  FROM [dbo].[guests]
+GO
+/****** Object:  StoredProcedure [dbo].[guests_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[guests_insert]
+			@guest_email varchar(100)
+           ,@guest_first varchar(25)
+           ,@guest_last varchar(25)
+           ,@guest_salt varchar(255)
+           ,@guest_pwd varchar(500)
+           ,@guest_phone varchar(10)
+		   as
+
+INSERT INTO [dbo].[guests]
+           ([guest_email]
+           ,[guest_first]
+           ,[guest_last]
+           ,[guest_salt]
+           ,[guest_pwd]
+           ,[guest_phone])
+     VALUES
+           (@guest_email
+           ,@guest_first
+           ,@guest_last
+           ,@guest_salt
+           ,@guest_pwd
+           ,@guest_phone)
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[guests_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[guests_update]
+		@guest_email varchar(100)
+        ,@guest_first varchar(25)
+        ,@guest_last varchar(25)
+        ,@guest_salt varchar(255)
+        ,@guest_pwd varchar(500)
+        ,@guest_phone varchar(10)
+		,@guest_id int
+		as
+
+UPDATE [dbo].[guests]
+   SET [guest_email] = @guest_email
+      ,[guest_first] = @guest_first
+      ,[guest_last] = @guest_last
+      ,[guest_salt] = @guest_salt
+      ,[guest_pwd] = @guest_pwd
+      ,[guest_phone] = @guest_phone
+ WHERE guest_id = @guest_id
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_categories_getAll]
+AS
+
+SELECT [cat_id]
+      ,[cat_name]
+  FROM [dbo].[menu_categories]
+  ORDER BY cat_name
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[menu_categories_getById]
+@cat_id int
+AS
+
+SELECT [cat_id]
+      ,[cat_name]
+  FROM [dbo].[menu_categories]
+  WHERE cat_id = @cat_id
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_categories_insert]
+@cat_name varchar(25)
+AS
+
+if not exists(SELECT * FROM menu_categories WHERE cat_name = @cat_name)
+begin
+INSERT INTO [dbo].[menu_categories]
+           ([cat_name])
+     VALUES
+           (@cat_name)
+end
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_categories_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_categories_update]
+@cat_id int,
+@cat_name varchar(25)
+AS
+UPDATE [dbo].[menu_categories]
+   SET [cat_name] = @cat_name
+ WHERE cat_id = @cat_id
+GO
+/****** Object:  StoredProcedure [dbo].[menu_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_getAll]
+AS
+
+SELECT [menu_id]
+      ,[menu_name]
+  FROM [dbo].[menus]
+  ORDER BY menu_name
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_getAll]
+AS
+SELECT [item_id]
+      ,[menu_id]
+      ,[cat_id]
+      ,[item_name]
+      ,[item_desc]
+      ,[item_allergens]
+      ,[item_price]
+      ,[item_gluten_free]
+      ,[item_active]
+  FROM [dbo].[menu_items]
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_getById]
+@item_id int
+AS
+
+SELECT [item_id]
+      ,[menu_id]
+      ,[cat_id]
+      ,[item_name]
+      ,[item_desc]
+      ,[item_allergens]
+      ,[item_price]
+      ,[item_gluten_free]
+      ,[item_active]
+  FROM [dbo].[menu_items]
+  WHERE item_id = @item_id
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getByMenu]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_getByMenu]
+@menu_id int
+AS
+
+SELECT [item_id]
+      ,[menu_id]
+      ,[cat_id]
+      ,[item_name]
+      ,[item_desc]
+      ,[item_allergens]
+      ,[item_price]
+      ,[item_gluten_free]
+      ,[item_active]
+  FROM [dbo].[menu_items]
+  WHERE menu_id = @menu_id
+  ORDER BY menu_id, item_name
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_getByMenuAndCat]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_getByMenuAndCat]
+@menu_id int,
+@cat_id int
+AS
+
+SELECT 
+       [item_name] as [Item]
+      ,[item_desc] as [Description]
+      ,[item_allergens] as [Allergens]
+      ,[item_price] as [Price]
+      ,[item_gluten_free] as [Gluten Free]
+  FROM [dbo].[menu_items]
+  WHERE menu_id = @menu_id AND cat_id = @cat_id AND item_active = 1
+  ORDER BY menu_id, item_name
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_insert]
+			@menu_id int
+           ,@cat_id int
+           ,@item_name varchar(50)
+           ,@item_desc varchar(500)
+           ,@item_allergens varchar(255)
+           ,@item_price decimal(5,2)
+           ,@item_gluten_free bit
+           ,@item_active bit
+AS
+INSERT INTO [dbo].[menu_items]
+           ([menu_id]
+           ,[cat_id]
+           ,[item_name]
+           ,[item_desc]
+           ,[item_allergens]
+           ,[item_price]
+           ,[item_gluten_free]
+           ,[item_active])
+     VALUES
+           (@menu_id
+           ,@cat_id
+           ,@item_name
+           ,@item_desc
+           ,@item_allergens
+           ,@item_price
+           ,@item_gluten_free
+           ,@item_active)
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_interim_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_interim_getAll]
+AS 
+SELECT menu_items.[item_id]
+      ,menus.[menu_name]
+      ,menu_categories.[cat_name]
+      ,menu_items.[item_name]
+      ,menu_items.[item_desc]
+      ,menu_items.[item_allergens]
+      ,menu_items.[item_price]
+      ,menu_items.[item_gluten_free]
+      ,menu_items.[item_active]
+  FROM [dbo].[menu_items]
+  JOIN [dbo].[menus]
+  ON menu_items.menu_id = menus.menu_id
+  JOIN [dbo].[menu_categories]
+  ON menu_items.cat_id = menu_categories.cat_id
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[menu_items_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[menu_items_update]
+			@menu_id int
+           ,@cat_id int
+           ,@item_name varchar(50)
+           ,@item_desc varchar(500)
+           ,@item_allergens varchar(255)
+           ,@item_price decimal(5,2)
+           ,@item_gluten_free bit
+           ,@item_active    bit
+		   ,@item_id int
+AS
+
+UPDATE [dbo].[menu_items]
+   SET [menu_id] = @menu_id
+      ,[cat_id] = @cat_id
+      ,[item_name] = @item_name
+      ,[item_desc] = @item_desc
+      ,[item_allergens] = @item_allergens
+      ,[item_price] = @item_price
+      ,[item_gluten_free] = @item_gluten_free
+      ,[item_active] = @item_active
+	  
+ WHERE item_id = @item_id
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_getAll]
+AS
+SELECT        dbo.reservations.res_id, dbo.reservations.guest_id, dbo.reservations.tbl_id, dbo.reservations.res_spec_req, dbo.reservations.res_guest_cnt, dbo.reservations.res_time, dbo.reservations.res_date, 
+                         dbo.reservations.user_id, dbo.guests.guest_first, dbo.guests.guest_last, dbo.guests.guest_email, dbo.[tables].tbl_name, dbo.sections.sect_name
+FROM            dbo.reservations INNER JOIN
+                         dbo.guests ON dbo.reservations.guest_id = dbo.guests.guest_id LEFT JOIN
+						 dbo.users ON dbo.reservations.user_id = dbo.users.user_id INNER JOIN
+                         dbo.[tables] ON dbo.reservations.tbl_id = dbo.[tables].tbl_id INNER JOIN
+						 dbo.sections ON dbo.[tables].sect_id = dbo.sections.sect_id 
+ORDER BY res_date DESC
+						 
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getByDate]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_getByDate]
+@res_date date
+AS
+
+SELECT [res_id]
+      ,[guest_id]
+      ,[tbl_id]
+      ,[user_id]
+      ,[res_date]
+      ,[res_time]
+      ,[res_guest_cnt]
+      ,[res_spec_req]
+  FROM [dbo].[reservations]
+  WHERE res_date = @res_date
+  ORDER BY res_time
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_getById]
+@res_id int
+AS
+
+SELECT [res_id]
+      ,[guest_id]
+      ,[tbl_id]
+      ,[user_id]
+      ,[res_date]
+      ,[res_time]
+      ,[res_guest_cnt]
+      ,[res_spec_req]
+  FROM [dbo].[reservations]
+  WHERE res_id = @res_id
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_insert]
+			@guest_id int
+           ,@tbl_id int
+           ,@user_id int
+           ,@res_date date
+           ,@res_time time(7)
+           ,@res_guest_cnt int
+           ,@res_spec_req varchar(255)
+AS
+
+INSERT INTO [dbo].[reservations]
+           ([guest_id]
+           ,[tbl_id]
+           ,[user_id]
+           ,[res_date]
+           ,[res_time]
+           ,[res_guest_cnt]
+           ,[res_spec_req])
+     VALUES
+           (@guest_id
+           ,@tbl_id
+           ,@user_id
+           ,@res_date
+           ,@res_time
+           ,@res_guest_cnt
+           ,@res_spec_req)
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_interim_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_interim_getAll]
+AS
+SELECT reservations.[res_id]
+      ,guests.[guest_first] + ' ' + guests.[guest_last] as guest_name
+	  ,guests.[guest_email]
+      ,[tables].[tbl_name]
+      ,users.[user_email]
+      ,reservations.[res_date]
+      ,reservations.[res_time]
+      ,reservations.[res_guest_cnt]
+      ,reservations.[res_spec_req]
+  FROM [dbo].[reservations] 
+  JOIN [dbo].[guests] 
+  ON reservations.guest_id = guests.guest_id
+  JOIN [dbo].[tables] 
+  ON reservations.tbl_id = [tables].tbl_id
+  JOIN [dbo].[users] 
+  ON reservations.user_id = users.user_id
+  ORDER BY res_date DESC;
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_interim_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[reservations_interim_getById]
+@user_id int
+AS
+SELECT reservations.[res_id]
+      ,guests.[guest_first] + ' ' + guests.[guest_last] as guest_name
+	  ,guests.[guest_email]
+      ,[tables].[tbl_name]
+      ,users.[user_email]
+      ,reservations.[res_date]
+      ,reservations.[res_time]
+      ,reservations.[res_guest_cnt]
+      ,reservations.[res_spec_req]
+  FROM [dbo].[reservations] 
+  JOIN [dbo].[guests] 
+  ON reservations.guest_id = guests.guest_id
+  JOIN [dbo].[tables] 
+  ON reservations.tbl_id = [tables].tbl_id
+  JOIN [dbo].[users] 
+  ON reservations.user_id = users.user_id
+  WHERE reservations.user_id = @user_id AND cast(res_date as datetime) + cast(res_time as datetime) > GETDATE()
+  ORDER BY res_date DESC;
+
+GO
+/****** Object:  StoredProcedure [dbo].[reservations_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[reservations_update]
+			@guest_id int
+           ,@tbl_id int
+           ,@user_id int
+           ,@res_date date
+           ,@res_time time(7)
+           ,@res_guest_cnt int
+           ,@res_spec_req varchar(255)
+		   ,@res_id int
+AS
+
+UPDATE [dbo].[reservations]
+   SET [guest_id] = @guest_id
+      ,[tbl_id] = @tbl_id
+      ,[user_id] = @user_id
+      ,[res_date] = @res_date
+      ,[res_time] = @res_time
+      ,[res_guest_cnt] = @res_guest_cnt
+      ,[res_spec_req] = @res_spec_req
+ WHERE res_id = @res_id
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[sections_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sections_getAll]
+AS
+
+SELECT [sect_id]
+      ,[sect_name]
+      ,[sect_desc]
+      ,[sect_active]
+  FROM [dbo].[sections]
+  ORDER BY sect_name
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[sections_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sections_getById]
+@sect_id int
+AS
+
+SELECT [sect_id]
+      ,[sect_name]
+      ,[sect_desc]
+      ,[sect_active]
+  FROM [dbo].[sections]
+  WHERE sect_id = @sect_id
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[sections_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sections_insert]
+			@sect_name varchar(50)
+           ,@sect_desc varchar(50)
+           ,@sect_active bit
+		   AS
+
+INSERT INTO [dbo].[sections]
+           ([sect_name]
+           ,[sect_desc]
+           ,[sect_active])
+     VALUES
+           (@sect_name
+           ,@sect_desc
+           ,@sect_active)
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[sections_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sections_update]
+			@sect_name varchar(50)
+           ,@sect_desc varchar(50)
+           ,@sect_active bit
+		   ,@sect_id int
+		   AS
+
+UPDATE [dbo].[sections]
+   SET [sect_name] = @sect_name
+      ,[sect_desc] = @sect_desc
+      ,[sect_active] = @sect_active
+ WHERE sect_id = @sect_id
+
+
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[states_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[states_getAll]
+AS
+SELECT [state_id]
+,[state_id] +' - ' + [state_name] as state_display
+,[state_name]
+FROM [dbo].[states]
+ORDER BY state_id
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[tables_getAll]
+AS
+
+SELECT [tbl_id]
+      ,[sect_id]
+      ,[tbl_name]
+      ,[tbl_desc]
+      ,[tbl_seat_cnt]
+      ,[tbl_active]
+  FROM [dbo].[tables]
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[tables_getById]
+@tbl_id int
+AS
+SELECT [tbl_id]
+      ,[sect_id]
+      ,[tbl_name]
+      ,[tbl_desc]
+      ,[tbl_seat_cnt]
+      ,[tbl_active]
+  FROM [dbo].[tables]
+WHERE tbl_id = @tbl_id;
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[tables_getTableForNewRes]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[tables_getTableForNewRes]
+@head_count int,
+@res_date date,
+@res_time time
+AS
+
+SELECT TOP 1 [tbl_id]
+  FROM [dbo].[tables]
+WHERE tbl_id <>
+
+ISNULL((SELECT [tbl_id]
+  FROM [dbo].[reservations]
+  WHERE (res_date = @res_date) 
+    AND (res_time BETWEEN DATEADD(MINUTE, -45, @res_time) AND DATEADD(HOUR, 1, @res_time))), 0)
+
+AND tbl_seat_cnt >= @head_count
+
+GO
+/****** Object:  StoredProcedure [dbo].[tables_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[tables_insert]
+@sect_id int,
+@tbl_name varchar(25),
+@tbl_desc varchar(50),
+@tbl_seat_cnt int,
+@tbl_active bit
+AS
+INSERT INTO [dbo].[tables]
+           ([sect_id]
+           ,[tbl_name]
+           ,[tbl_desc]
+           ,[tbl_seat_cnt]
+           ,[tbl_active])
+     VALUES
+           (@sect_id,
+		   @tbl_name,
+		   @tbl_desc,
+		   @tbl_seat_cnt,
+		   @tbl_active)
+GO
+/****** Object:  StoredProcedure [dbo].[tables_interim_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[tables_interim_getAll]
+AS
+SELECT tables.[tbl_id]
+      ,sections.[sect_name]
+      ,tables.[tbl_name]
+      ,tables.[tbl_desc]
+      ,tables.[tbl_seat_cnt]
+      ,tables.[tbl_active]
+  FROM [dbo].[tables]
+  JOIN [dbo].[sections]
+  ON tables.sect_id = sections.sect_id;
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[tables_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[tables_update]
+@tbl_id int,
+@sect_id int,
+@tbl_name varchar(25),
+@tbl_desc varchar(50),
+@tbl_seat_cnt int,
+@tbl_active bit
+AS
+UPDATE [dbo].[tables]
+   SET [sect_id] = @sect_id
+      ,[tbl_name] = @tbl_name
+      ,[tbl_desc] = @tbl_desc
+      ,[tbl_seat_cnt] = @tbl_seat_cnt
+      ,[tbl_active] = @tbl_active
+ WHERE tbl_id = @tbl_id;
+GO
+/****** Object:  StoredProcedure [dbo].[users_getAll]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[users_getAll]
+AS
+SELECT [user_id]
+      ,[user_email]
+      ,[user_first]
+      ,[user_last]
+      ,[user_add1]
+      ,[user_add2]
+      ,[user_city]
+      ,[state_id]
+      ,[user_zip]
+      ,[user_salt]
+      ,[user_pwd]
+      ,[user_phone]
+      ,[user_active]
+  FROM [dbo].[users]
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[users_getById]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[users_getById]
+@user_id int
+AS
+
+SELECT [user_id]
+      ,[user_email]
+      ,[user_first]
+      ,[user_last]
+      ,[user_add1]
+      ,[user_add2]
+      ,[user_city]
+      ,[state_id]
+      ,[user_zip]
+      ,[user_salt]
+      ,[user_pwd]
+      ,[user_phone]
+      ,[user_active]
+  FROM [dbo].[users]
+WHERE user_id = @user_id;
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[users_insert]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[users_insert]
+@user_email varchar(100),
+@user_first varchar(25),
+@user_last varchar(25),
+@user_add1 varchar(50),
+@user_add2 varchar(50),
+@user_city varchar(25),
+@state_id char(2),
+@user_zip varchar(10),
+@user_salt varchar(255),
+@user_pwd varChar(500),
+@user_phone varchar(10),
+@user_active bit
+AS
+
+INSERT INTO [dbo].[users]
+           ([user_email]
+           ,[user_first]
+           ,[user_last]
+           ,[user_add1]
+           ,[user_add2]
+           ,[user_city]
+           ,[state_id]
+           ,[user_zip]
+           ,[user_salt]
+           ,[user_pwd]
+           ,[user_phone]
+           ,[user_active])
+     VALUES
+           (@user_email,
+		   @user_first,
+		   @user_last,
+		   @user_add1,
+		   @user_add2,
+		   @user_city,
+		   @state_id,
+		   @user_zip,
+		   @user_salt,
+		   @user_pwd,
+		   @user_phone,
+		   @user_active)
+GO
+/****** Object:  StoredProcedure [dbo].[users_login]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[users_login]
+@user_email varchar(100),
+@user_pwd varchar(500)
+AS
+  SELECT [user_id]
+      ,[user_first] + ' ' + [user_last] as fullname
+  FROM [dbo].[users]
+
+  WHERE user_email = @user_email 
+	AND user_pwd = @user_pwd
+	AND user_active = 1;
+GO
+/****** Object:  StoredProcedure [dbo].[users_update]    Script Date: 9/22/2016 9:01:15 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[users_update]
+@user_id int,
+@user_email varchar(100),
+@user_first varchar(25),
+@user_last varchar(25),
+@user_add1 varchar(50),
+@user_add2 varchar(50),
+@user_city varchar(25),
+@state_id char(2),
+@user_zip varchar(10),
+@user_salt varchar(255),
+@user_pwd varChar(500),
+@user_phone varchar(10),
+@user_active bit
+AS
+UPDATE [dbo].[users]
+   SET [user_email] = @user_email
+      ,[user_first] = @user_first
+      ,[user_last] = @user_last
+      ,[user_add1] = @user_add1
+      ,[user_add2] = @user_add2
+      ,[user_city] = @user_city
+      ,[state_id] = @state_id
+      ,[user_zip] = @user_zip
+      ,[user_salt] = @user_salt
+      ,[user_pwd] = @user_pwd
+      ,[user_phone] = @user_phone
+      ,[user_active] = @user_active
+
+ WHERE user_id = @user_id;
+GO

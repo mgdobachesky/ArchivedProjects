@@ -1,0 +1,6 @@
+﻿.jumbotron {
+    min-height: 25em;
+    background-image: url(../images/midtermBanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

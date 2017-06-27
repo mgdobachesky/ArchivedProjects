@@ -44,7 +44,7 @@ namespace week1
         {
             string strConn;
 
-            strConn = "Server=sql.neit.edu;Database=se255_MDobachesky;User Id=se255_MDobachesky;Password=001264912;";
+            strConn = "Server=sql.neit.edu;Database=se255_MDobachesky;User Id=se255_MDobachesky;Password=PASSWORD;";
 
             return strConn;
         }

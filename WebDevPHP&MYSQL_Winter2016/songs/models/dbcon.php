@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=localhost;dbname=music";
 $username = "musicphp";
-$password = "password";
+$password = "PASSWORD";
 
 try {
     $db = new PDO($dsn, $username, $password);

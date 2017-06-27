@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=localhost;dbname=friday";
 $username = "fridayphp";
-$password = "password";
+$password = "PASSWORD";
 
 try {
     //what code may fail
